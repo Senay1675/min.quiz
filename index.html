@@ -8,6 +8,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+    <h1>Ankademin film-quiz</h1>
 
 <div class="quiz-container">
   <div class="question" id="q1">1. In The Matrix, does Neo take the blue pill or the red pill? <button onclick="checkAnswer(false, 'q1')">Blue</button> <button onclick="checkAnswer(true, 'q1')">Red</button></div>
@@ -22,7 +23,15 @@
   <div class="question" id="q10">10. Which city appears in the title of the 3rd movie The Fast and Furious franchise?<button onclick="checkAnswer(false, 'q10')">Miami</button> <button onclick="checkAnswer(true, 'q10')">Tokyo</button></div>
 </div>
 
+<button id="dark-mode" onclick="myFunction()">Toggle dark mode</button>
 
+<div class="result-popup" id="resultPopup">
+    <div class="result-popup-content">
+      <h2>Resultat</h2>
+      <p>Du fick <span id="score">0</span> av 10 rätt!</p>
+      <p id="resultMessage"></p>
+    </div>
+  </div>
 
 </body>
 </html>
