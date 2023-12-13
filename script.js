@@ -30,7 +30,7 @@ function checkAnswer(answer, questionId) {
       const percentage = (score / totalQuestions) * 100;
 
       if (percentage >= 75) {
-        resultMessage.textContent = "All those hours you've spent on movies have not been in vain. Excelent!";
+        resultMessage.textContent = "All those hours you've spent on movies have not been in vain. Excellent!";
         resultPopup.style.backgroundColor = "#4CAF50";
       } else if (percentage >= 50) {
         resultMessage.textContent = "You have passed. Well done!";

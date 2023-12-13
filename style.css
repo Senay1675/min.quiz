@@ -37,6 +37,7 @@ body {
   .quiz-container button:focus{
  background-color: brown;
  border: solid black;
+color: yellow;
   }
   
   button:hover {
@@ -67,7 +68,18 @@ body {
     text-align: center;
     margin: 50px;
   }
+.resultctn{
+    display: flex;
+    justify-content: center;
+}
+
   #showResultButton{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border:ridge black;
+    color: white;
+    align-content: center;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgb(129, 100, 5);
+    margin: 25px;
+    font-size: larger;
   }
