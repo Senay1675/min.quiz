@@ -3,32 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test</title>
+  <title>Movie-quiz</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Ankademin film-quiz</h1>
+    <h1>Ankademin Movie-quiz</h1>
+    <div id="darkmodectn">
+        <button id="darkmodebtn" onclick="myFunction()">Toggle dark mode</button>
 
+    </div>
+    <p>Lights, camera, action! Get ready to test your knowledge of the silver screen with our thrilling movie quiz. Whether you're a film aficionado or a casual moviegoer, this quiz is designed to challenge your cinematic expertise.
+
+        Dive into the fascinating world of movies as we take you through iconic scenes, legendary quotes, and unforgettable characters. From classic masterpieces to the latest blockbusters, our quiz covers a wide range of genres and eras. <br><br>
+        Lights will dim, questions will roll, and the applause awaits. Break a leg, movie buff!
+    </p>
+    
 <div class="quiz-container">
-  <div class="question" id="q1">1. In The Matrix, does Neo take the blue pill or the red pill? <button onclick="checkAnswer(false, 'q1')">Blue</button> <button onclick="checkAnswer(true, 'q1')">Red</button></div>
-  <div class="question" id="q2">2. What did Zach Galifianakis call the baby in The Hangover? <button onclick="checkAnswer(true, 'q2')">Carlos</button> <button onclick="checkAnswer(false, 'q2')">Jose</button></div>
-  <div class="question" id="q3">3: In what thriller does Robert De Niro famously say "You talkin' to me?<button onclick="checkAnswer(false, 'q3')">Casino</button> <button onclick="checkAnswer(true, 'q3')">Taxi Driver</button></div>
-  <div class="question" id="q4">4. If you watch the Marvel movies in chronological order, which movie would you start with? <button onclick="checkAnswer(true, 'q4')">Captain America</button> <button onclick="checkAnswer(false, 'q4')">Iron Man</button></div>
-  <div class="question" id="q5">5. What was in the box in Se7en? <button onclick="checkAnswer(false, 'q5')">A hand</button> <button onclick="checkAnswer(true, 'q5')">A head</button></div>
-  <div class="question" id="q6">6. In the lord of the rings What is the name of Saruman’s fortress?. <button onclick="checkAnswer(false, 'q6')">Mordor</button> <button onclick="checkAnswer(true, 'q6')">Isengard</button></div>
-  <div class="question" id="q7">7. In the beginning of the movie Goodfellas, who says the line 'As far back as I can remember, "I always wanted to be a gangster". <button onclick="checkAnswer(true, 'q7')">Henry Hill</button> <button onclick="checkAnswer(false, 'q7')">Jimmy Conway</button></div>
-  <div class="question" id="q8">8. Which movie has the line "Nobody puts Baby in the corner"? <button onclick="checkAnswer(false, 'q8')">Grease</button> <button onclick="checkAnswer(true, 'q8')">Dirty Dancing</button></div>
-  <div class="question" id="q9">9. What African country would you be in if you were with Marty, Melman & Gloria? <button onclick="checkAnswer(true, 'q9')">Madagascar</button> <button onclick="checkAnswer(false, 'q9')">Kenya</button></div>
-  <div class="question" id="q10">10. Which city appears in the title of the 3rd movie The Fast and Furious franchise?<button onclick="checkAnswer(false, 'q10')">Miami</button> <button onclick="checkAnswer(true, 'q10')">Tokyo</button></div>
+  <div class="question" id="q1">1. In The Matrix, does Neo take the blue pill or the red pill? <br><br> <button onclick="checkAnswer(false, 'q1')">Blue</button> <button onclick="checkAnswer(true, 'q1')">Red</button></div> 
+  <div class="question" id="q2">2. What did Zach Galifianakis call the baby in The Hangover? <br><br> <button onclick="checkAnswer(true, 'q2')">Carlos</button> <button onclick="checkAnswer(false, 'q2')">Jose</button></div> 
+  <div class="question" id="q3">3: In what thriller does Robert De Niro famously say "You talkin' to me?<br><br><button onclick="checkAnswer(false, 'q3')">Casino</button> <button onclick="checkAnswer(true, 'q3')">Taxi Driver</button></div>
+  <div class="question" id="q4">4. If you watch the Marvel movies in chronological order, which movie would you start with? <br><br><button onclick="checkAnswer(true, 'q4')">Captain America</button> <button onclick="checkAnswer(false, 'q4')">Iron Man</button></div>
+  <div class="question" id="q5">5. What was in the box in Se7en?<br><br> <button onclick="checkAnswer(false, 'q5')">A hand</button> <button onclick="checkAnswer(true, 'q5')">A head</button></div>
+  <div class="question" id="q6">6. In the lord of the rings What is the name of Saruman’s fortress?<br><br> <button onclick="checkAnswer(false, 'q6')">Mordor</button> <button onclick="checkAnswer(true, 'q6')">Isengard</button></div>
+  <div class="question" id="q7">7. In the beginning of the movie Goodfellas, who says the line 'As far back as I can remember, "I always wanted to be a gangster". <br><br> <button onclick="checkAnswer(true, 'q7')">Henry Hill</button> <button onclick="checkAnswer(false, 'q7')">Jimmy Conway</button></div>
+  <div class="question" id="q8">8. Which movie has the line "Nobody puts Baby in the corner"? <br><br><button onclick="checkAnswer(false, 'q8')">Grease</button> <button onclick="checkAnswer(true, 'q8')">Dirty Dancing</button></div>
+  <div class="question" id="q9">9. What African country would you be in if you were with Marty, Melman & Gloria? <br><br><button onclick="checkAnswer(true, 'q9')">Madagascar</button> <button onclick="checkAnswer(false, 'q9')">Kenya</button></div>
+  <div class="question" id="q10">10. Which city appears in the title of the 3rd movie The Fast and Furious franchise?<br><br> <button onclick="checkAnswer(false, 'q10')">Miami</button> <button onclick="checkAnswer(true, 'q10')">Tokyo</button></div>
 </div>
+<button id="showResultButton" onclick="showResult()">Show Results</button>
 
-<button id="dark-mode" onclick="myFunction()">Toggle dark mode</button>
 
 <div class="result-popup" id="resultPopup">
     <div class="result-popup-content">
-      <h2>Resultat</h2>
-      <p>Du fick <span id="score">0</span> av 10 rätt!</p>
+      <h2>Results</h2>
+      <p>You got <span id="score">0</span> of 10 right!</p>
       <p id="resultMessage"></p>
     </div>
   </div>
