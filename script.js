@@ -1,7 +1,9 @@
-let score = 0;
-let answeredQuestions = 0;
+let score = 0; //definierat default värden 
+let answeredQuestions = 0; //värdet alltid är 0 på en obesvarad fråga. 
 
-function checkAnswer(answer, questionId) {
+function checkAnswer(answer, questionId) { //en funktion för att kolla svaren och där har jag implementerat två knappar som ska ”kolla svaren”. 
+	                                          // Om svaren är rätt går värdet upp alltså de plussen du ser. 
+											  //Om du får fel svar då händer ingenting. Då forsätter värdet va 0
   const question = document.getElementById(questionId);
   const buttons = question.getElementsByTagName("button");
 
@@ -26,7 +28,9 @@ function checkAnswer(answer, questionId) {
     const showResultButton = document.getElementById("showResultButton");
     showResultButton.disabled = false; 
 
-    showResultButton.onclick = function() {
+    showResultButton.onclick = function() { //Slutligen har jag en funktion som visar när alla frågor är ifyllda. 
+		                                    //Det är den med === där har du en funktion som kalkyler 
+		                                   //totala värdet och baserat på procentuellt rätta svar får du dem svaren som står dä
       const percentage = (score / totalQuestions) * 100;
 
       if (percentage >= 75) {
